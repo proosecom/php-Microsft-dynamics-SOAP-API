@@ -246,7 +246,7 @@ $authHeader = $CrmAuth->GetHeaderOnline($uname, $pass, $msdynamics_url);
 
 			
 $userid = getMsDynamicsUserId($authHeader, $msdynamics_url);		
-$result = CreateContacAndCase($authHeader,$userid, $msdynamics_url, $contact, $CrmAuthenticationHeader, $CrmAuth);
+$result = CreateContacAndCase($authHeader,$userid, $msdynamics_url, $data, $CrmAuthenticationHeader, $CrmAuth);
 $$response = "";
 if($result){				
 	$response = $this->responseArray(true,true,"Successfully created Microsoft Dynamics case!",[],['ms_dynamics_case' => [$result]]);
